@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "aws-cdk-lib": "^2.120.0",
+    "node": "^21.2.0",
+    "typescript": "^5.3.3"
+  }
+}

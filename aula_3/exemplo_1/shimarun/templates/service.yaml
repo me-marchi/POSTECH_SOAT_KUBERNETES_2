@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
- name: {{ include "shimarun.fullname" . }}
- labels:
-   app: {{ include "shimarun.name" . }}
+  name: {{ include "shimarun.fullname" . }}
+  labels:
+    {{- include "shimarun.labels" . | nindent 4 }}
 spec:
- type: NodePort
- ports:
-   - port: {{ .Values.service.port }}
-     targetPort: 80
-     protocol: TCP
-     nodePort: 31113
- selector:
-   app: {{ include "shimarun.name" . }}
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "shimarun.selectorLabels" . | nindent 4 }}
