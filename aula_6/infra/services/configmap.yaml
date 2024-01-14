@@ -5,4 +5,4 @@ metadata:
   labels:
     name: db-config
 data:
-  MONGO_URL: mongodb://ab8f079582e1f4fa786504065df56521-1836127033.us-east-1.elb.amazonaws.com:27017/db_fiap
+  MONGO_URL: mongodb://a153b0027bb0e41a796e5eb6f9bf9c46-1423994784.us-east-1.elb.amazonaws.com:27017/db_fiap
